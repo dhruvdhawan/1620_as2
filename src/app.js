@@ -45,3 +45,31 @@ function saveNote(ref){
   refreshNotesList()
   ref.parentNode.parentNode.remove()
 }
+function refreshNotesList(){
+  let notesList = ""
+  for(var note of notes){
+  notesList+=`
+          <li data-id="${note.id}" onClick="showNote(this)" class="noteslist__item">
+          ${note.title}
+          </li>
+          `
+  }
+  notesListContainer.innerHTML=notesList
+}
+
+function showNote(ref){
+  const id = ref.getAttribute("data-id")
+  const note = notes.find(item => item.id == id)
+  const noteTemplate = ` 
+  <div class="newnote__container"> 
+  <input class= "title" value="${note.title}" type="text" placeholder="Title..."/> 
+  <textarea class="notebody" read-only placeholder="Note...">${note.noteBody}</textarea>
+  <div class="newnote__buttons">
+  <button onClick="deleteNote(this)" class="cancel">Cancel</button>
+ </div>
+  </div>
+  ` 
+  notesArea.innerHTML = noteTemplate
+ }
+ 
+ refreshNotesList()
