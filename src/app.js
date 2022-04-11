@@ -29,3 +29,19 @@ function createNewNote() {
 function deleteNote(ref){
   ref.parentNode.parentNode.remove()
 }
+
+function saveNote(ref){
+  const title=document.getElementsByClassName("title")[0].value.trim()
+  const noteBody = document.getElementsByClassName("notebody")[0].value.trim()
+  if(title==="" || noteBody === "") {
+    alert("Can't save empty note") 
+    return
+  }
+  const id= notes.length + 1
+  const note={
+    title,noteBody,id
+  }
+  notes.push(note)
+  refreshNotesList()
+  ref.parentNode.parentNode.remove()
+}
