@@ -145,3 +145,28 @@ footer p {
   flex-direction: column;
   padding: 15px;
 }
+.newnote__container > input{
+  background:none;
+  border: none;
+  font-size: 24px;
+  outline: none;
+  border-bottom: 1px solid rgb(100, 77, 47);
+  padding-bottom:5px;
+}
+
+.newnote__container > textarea{
+  background:none;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  padding-bottom:5px;
+  height: 320px;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.newnote__buttons{
+display: flex;
+justify-content: space-between;
+}
