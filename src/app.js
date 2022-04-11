@@ -25,3 +25,7 @@ function createNewNote() {
     `
     notesArea.innerHTML=newNote
 }
+
+function deleteNote(ref){
+  ref.parentNode.parentNode.remove()
+}
