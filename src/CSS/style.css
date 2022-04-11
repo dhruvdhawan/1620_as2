@@ -179,7 +179,7 @@ justify-content: space-between;
   font-weight: 600;
   font-size: 14px;
   width: 80px;
-  }
+}
   
 .cancel{
   border: none;
@@ -190,4 +190,23 @@ justify-content: space-between;
   font-weight: 600;
   font-size: 14px;
   width: 80px;
-  }
+}
+.write-note-area{ 
+ display: flex;
+ flex:1;
+ flex-wrap: wrap;
+ justify-content:center;
+ align-items: center;
+ width: 80vw;
+}
+
+.title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.noteslist__item{
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
